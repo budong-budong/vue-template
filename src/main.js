@@ -18,6 +18,9 @@ import VOrgTree from 'v-org-tree'
 import 'v-org-tree/dist/v-org-tree.css'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import echarts from 'echarts'
+import Vuex from 'vuex'
+Vue.use(Vuex)
 // 实际打包时应该不引入mock
 /* eslint-disable */
 if (process.env.NODE_ENV !== 'production') require('@/mock')
@@ -31,7 +34,6 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
  
 Vue.use(VueAxios,axios);
-
 Vue.use(TreeTable)
 Vue.use(VOrgTree)
 /**
@@ -46,6 +48,7 @@ Vue.config.productionTip = false
  * @description 全局注册应用配置
  */
 Vue.prototype.$config = config
+Vue.prototype.$echarts = echarts
 /**
  * 注册指令
  */

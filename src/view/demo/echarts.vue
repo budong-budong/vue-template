@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import echarts from "echarts";
 export default {
   name: "echarts",
   data() {
@@ -15,7 +14,7 @@ export default {
   },
   methods: {
     initData() {
-      let myChart = echarts.init(document.getElementById('main1'));
+      let myChart = this.$echarts.init(document.getElementById('main1'));
       let option = {
         title: {
           text: "ECharts 入门示例"
@@ -39,7 +38,7 @@ export default {
       myChart.setOption(option)
     },
     initData2(){
-         let myChart2 = echarts.init(document.getElementById('main2'));
+         let myChart2 = this.$echarts.init(document.getElementById('main2'));
          let option2 = {
              type:'pie',
              data:[

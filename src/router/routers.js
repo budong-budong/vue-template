@@ -60,6 +60,15 @@ export default [
         component: Main,
         children: [
             {
+                path: 'canvasMap',
+                name: 'canvas地图',
+                meta: {
+                    icon: 'md-contact',
+                    title: 'canvas地图'
+                },
+                component: () => import('@/view/base/canvasMap/canvasMap.vue')
+            },
+            {
                 path: 'harvardartmuseums',
                 name: '哈弗美术馆',
                 meta: {
@@ -125,13 +134,13 @@ export default [
                 component: () => import('@/view/demo/echarts.vue')
             },
             {
-                path: 'barGraph',
+                path: 'bar',
                 name: '柱状图案例',
                 meta: {
                     icon: 'md-contact',
                     title: '柱状图案例'
                 },
-                component: () => import('@/view/demo/barGraph.vue')
+                component: () => import('@/view/demo/bar.vue')
             },
             
         ]

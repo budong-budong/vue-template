@@ -36,35 +36,6 @@ export default {
         })
       })
     }
-
-    // handleSubmit(loginInfo){
-    //   this.$auth.login({
-    //     data:{
-    //       'username':loginInfo.username,
-    //       'password':loginInfo.password,
-    //       'rememberMe':true
-    //     },
-    //     success:function(result){
-    //       if(result.data.returnCode === 200){
-    //         localStorage.socket_token = result.data.returnData.socketToken
-    //         sessionStorage.socket_token = result.data.returnData.socketToken
-    //       }else{
-    //         if(result.data.returnMsg && result.data.returnMsg !== 'Bad credentials'){
-    //           this.$error(result.data.returnMsg,3)
-    //         }else{
-    //           this.$error('用户名或密码错误！请重试！',3)
-    //         }
-    //         throw new Error('登录发生错误')
-    //       }
-    //     },
-    //     error:function(result){
-    //       this.$Message.error(result.data.returnMsg)
-    //     },
-    //     rememberMe:true,
-    //     redirect:'/',
-    //     fetchUser:true
-    //   })
-    // }
   }
 }
 </script>

@@ -1,17 +1,16 @@
 <template>
-  <div id="main"></div>
+  <div id="main" style="width: 600px;height:400px;"></div>
 </template>
 
 <script>
-import echarts from "echarts";
 export default {
-  name: "barGraph",
+  name: "bar",
   data() {
     return {};
   },
   methods: {
     initData() {
-      let myChart = echarts.init(document.getElementById("main"));
+      let myChart = this.$echarts.init(document.getElementById("main"));
       let xAxisData = [];
       let data1 = [];
       let data2 = [];
@@ -119,8 +118,8 @@ export default {
             data: data4
           }
         ]
-      }
-      myChart.on("brushSelected", renderBrushed)
+      };
+      myChart.on("brushSelected", renderBrushed);
       function renderBrushed(params) {
         let brushed = [];
         let brushComponent = params.batch[0];
@@ -140,20 +139,15 @@ export default {
               color: "#fff"
             }
           }
-        })
+        });
       }
     }
   },
-  mounted() {},
-  created() {
+  mounted() {
     this.initData();
   }
+ 
 };
 </script>
 
-<style lang="less" scoped>
-#main {
-  width: 600px;
-  height: 400px;
-}
-</style>
+<style lang="less" scoped></style>
